@@ -1,4 +1,4 @@
-import writer
+from ichiran import writer
 
 
 def test_new_readme_is_written_and_markdown_wrapping_is_cleaned(tmp_path):

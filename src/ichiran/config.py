@@ -4,7 +4,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from display import print_info, print_success
+from ichiran.display import print_info, print_success
 
 CONFIG_DIR = Path.home() / ".config" / "ichiran"
 CONFIG_FILE = CONFIG_DIR / "config.json"

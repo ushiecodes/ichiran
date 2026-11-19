@@ -1,17 +1,17 @@
 import argparse
 import os
 
-from config import get_api_key, load_api_key, reset_api_key
-from display import (
+from ichiran.config import get_api_key, load_api_key, reset_api_key
+from ichiran.display import (
     console,
     print_banner,
     print_info_box,
     print_success,
     print_warning,
 )
-from gemini import generate_readme
-from interview import run_interview
-from writer import write_readme
+from ichiran.gemini import generate_readme
+from ichiran.interview import run_interview
+from ichiran.writer import write_readme
 
 
 def main():

@@ -11,7 +11,7 @@ def test_project_declares_authors_test_extra_and_cli_entry_point():
         "Utkarsh Kamat",
         "Hruday",
     }
-    assert project["scripts"]["ichiran"] == "cli:main"
+    assert project["scripts"]["ichiran"] == "ichiran.cli:main"
     assert {"pytest", "pytest-cov", "pytest-mock"} <= {
         dependency.split(">")[0] for dependency in project["optional-dependencies"]["test"]
     }

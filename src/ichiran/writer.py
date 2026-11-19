@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from display import print_info, print_success, print_warning
+from ichiran.display import print_info, print_success, print_warning
 
 
 def write_readme(content: str, directory: str = ".") -> None:

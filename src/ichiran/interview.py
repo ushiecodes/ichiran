@@ -1,4 +1,4 @@
-from display import (
+from ichiran.display import (
     console,
     print_info,
     print_layer_prompt,

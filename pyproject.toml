@@ -1,17 +1,17 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "ichiran"
-version = "0.1.0"
+dynamic = ["version"]
 description = "AI-powered README generator — interview your project, scan your codebase, generate a complete README"
 readme = "README.md"
 requires-python = ">=3.12"
 license = "MIT"
 authors = [
     { name = "Utkarsh Kamat", email = "work.utkarshkamat@gmail.com" },
-    { name = "Hruday" }
+    { name = "Hruday", email = "mscids2024.hruday@unigoa.ac.in" }
 ]
 keywords = ["readme", "documentation", "ai", "gemini", "cli", "generator"]
 classifiers = [
@@ -42,14 +42,20 @@ test = [
 ]
 
 [project.scripts]
-ichiran = "cli:main"
+ichiran = "ichiran.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/ushiecodes/ichiran"
 Issues = "https://github.com/ushiecodes/ichiran/issues"
 
-[tool.setuptools]
-py-modules = ["cli", "config", "display", "gemini", "interview", "prompt", "scanner", "writer"]
+[tool.setuptools.dynamic]
+version = {attr = "ichiran.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["ichiran*"]
+
+
 
 [dependency-groups]
 dev = [
@@ -61,3 +67,7 @@ dev = [
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["N999"]
 "tests/__init__.py" = ["N999"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

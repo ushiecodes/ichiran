@@ -1,5 +1,5 @@
-import cli
-import gemini
+from ichiran import cli
+from ichiran import gemini
 
 
 def test_cli_to_readme_pipeline_with_mocked_gemini(monkeypatch, tmp_path):

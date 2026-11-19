@@ -2,7 +2,7 @@ from io import StringIO
 
 from rich.console import Console
 
-import display
+from ichiran import display
 
 
 def capture_console(monkeypatch):

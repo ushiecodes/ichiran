@@ -1,4 +1,4 @@
-import gemini
+from ichiran import gemini
 
 
 class RateLimitError(Exception):

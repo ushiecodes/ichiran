@@ -3,11 +3,11 @@ import time
 from google import genai
 from google.genai.errors import ClientError
 
-from config import get_api_key
-from display import print_info, print_warning
-from interview import format_answers
-from prompt import SYSTEM_PROMPT
-from scanner import format_codebase_for_prompt, scan_codebase
+from ichiran.config import get_api_key
+from ichiran.display import print_info, print_warning
+from ichiran.interview import format_answers
+from ichiran.prompt import SYSTEM_PROMPT
+from ichiran.scanner import format_codebase_for_prompt, scan_codebase
 
 
 def generate_readme(answers: dict) -> str:

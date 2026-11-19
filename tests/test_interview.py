@@ -1,4 +1,4 @@
-import interview
+from ichiran import interview
 
 
 def test_read_single_handles_skip_tldr_rtfm_and_required_answers(monkeypatch):

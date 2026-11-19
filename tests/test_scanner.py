@@ -1,6 +1,6 @@
 from pathlib import Path
 
-import scanner
+from ichiran import scanner
 
 
 def test_scan_applies_whitelist_binary_and_ignore_rules(project_dir):

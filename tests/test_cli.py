@@ -1,4 +1,4 @@
-import cli
+from ichiran import cli
 
 
 def test_version_flag_prints_installed_version(monkeypatch, capsys):

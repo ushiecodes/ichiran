@@ -2,7 +2,7 @@ import importlib
 import json
 from pathlib import Path
 
-import config
+from ichiran import config
 
 
 def test_default_config_path_uses_home_directory(monkeypatch, tmp_path):
