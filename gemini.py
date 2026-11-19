@@ -38,7 +38,7 @@ def _call_with_retry(client, prompt: str, retries: int = 3) -> str:
     for attempt in range(retries):
         try:
             response = client.models.generate_content(
-                model="gemini-2.5-flash",
+                model="gemini-3.5-flash",
                 config={"system_instruction": SYSTEM_PROMPT},
                 contents=prompt
             )
